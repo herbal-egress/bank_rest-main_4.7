@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. openapi работает">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/61589886-feb9-40b6-9f8c-94917b016e90/storage_v2/_src_/database/bankdb.unPFrA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/61589886-feb9-40b6-9f8c-94917b016e90/storage_v2/_src_/database/bankdb.unPFrA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README_Bank_rest.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_Bank_rest.md" afterDir="false" />
     </list>
@@ -255,15 +256,8 @@
       <workItem from="1759079783829" duration="111000" />
       <workItem from="1759080057286" duration="1006000" />
       <workItem from="1759081146188" duration="814000" />
-      <workItem from="1759081982586" duration="1593000" />
-    </task>
-    <task id="LOCAL-00028" summary="Этап 5 тесты">
-      <option name="closed" value="true" />
-      <created>1758785393921</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1758785393921</updated>
+      <workItem from="1759081982586" duration="1629000" />
+      <workItem from="1759084116661" duration="242000" />
     </task>
     <task id="LOCAL-00029" summary="Этап 5 тесты">
       <option name="closed" value="true" />
@@ -649,7 +643,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759083348290</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Этап 7 документация. openapi работает">
+      <option name="closed" value="true" />
+      <created>1759083589891</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1759083589891</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
