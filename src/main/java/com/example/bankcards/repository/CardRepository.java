@@ -18,10 +18,8 @@ public interface CardRepository extends JpaRepository<Card, Long> {
 
     void deleteAllCardsByUserId(Long userId);
 
-    @Lock(LockModeType.PESSIMISTIC_WRITE)
-    Page<Card> findByUserId(Long userId, Pageable pageable);
+      Page<Card> findByUserId(Long userId, Pageable pageable);
 
-    @Lock(LockModeType.PESSIMISTIC_WRITE)
     boolean existsByEncryptedCardNumber(String encryptedCardNumber);
 
 

@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Integer> {
-    @Lock(LockModeType.PESSIMISTIC_WRITE)
+
     Optional<Role> findByName(Role.RoleType name);
 }
