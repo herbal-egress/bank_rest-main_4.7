@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. openapi работает">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_Bank_rest.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_Bank_rest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.changelog-master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/sql/001-initial-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/sql/001-initial-schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/sql/002-initial-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/sql/002-initial-data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;herbal-egress&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/herbal-egress/bank_rest-main.git&quot;,
+    &quot;accountId&quot;: &quot;6f312898-8386-4cc0-ac37-f7c0007e4a23&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="32v0etYIym51X7Crej0P7wOVOQB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminCardControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminCardControllerTestI.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminControllerTest.deleteUser_ShouldDeleteUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminControllerTest.getUserById_ShouldReturnUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AllTestsSuite.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthControllerTest.authenticate_WithEmptyPassword_ShouldReturnBadRequest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthControllerTest.register_ShouldReturnToken.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceTest.createCard_Success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceTest.getCardById_Success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceTest.updateCard_Success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreateCardIT.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreateUserIT.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EncryptionServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetCardBalanceIT.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoginIT.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TransactionServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TransactionServiceTest.transfer_InsufficientFunds_ThrowsException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TransactionServiceTest.transfer_SameCard_ThrowsException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TransactionServiceTest.transfer_Success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserCardControllerTest.blockUserCard_ShouldBlockCard.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserCardControllerTest.blockUserCard_ShouldMessage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserCardControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserCardControllerTest.transfer_ShouldPerformTransfer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserCardControllerTest.transfer_ShouldPerformTransfer_Integration.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.createUser_Success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bank-rest [-version].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bank-rest [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bank-rest [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bank-rest [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bank-rest [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bank-rest [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bank-rest [verify].executor&quot;: &quot;Run&quot;,
+    &quot;OpenAPI/Swagger Code Generator.openapi.yaml.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BankRestApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dIvan/Desktop/bank_rest-main_4.7&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.7" />
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.6\src\main\java\com\example\bankcards\util" />
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.5\src\test\java\com\example\bankcards\service" />
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.5\src\main\java\com\example\bankcards\entity" />
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.5\src\test\java\com\example\bankcards\controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.5\src\test\java\com\example\bankcards\service" />
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.5\src\test\resources" />
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.5\src\test\resources\db\migration" />
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.5\src\main\resources" />
+      <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.5\src\main\resources\db\migration" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.bankcards.config.security" />
+      <recent name="com.example.bankcards.security" />
+      <recent name="com.example.bankcards.util" />
+      <recent name="com.example.bankcards.service" />
+      <recent name="com.example.bankcards.service.Impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AllTestsSuite">
+    <configuration name="AllTestsSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank-rest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AllTestsSuite" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankRestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="bank-rest" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.bankcards.BankRestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AllTestsSuite" />
+      <item itemvalue="Spring Boot.BankRestApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AllTestsSuite" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="" />
+      <created>1758285836251</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758285836251</updated>
+      <workItem from="1758285837393" duration="8338000" />
+      <workItem from="1758373181344" duration="2397000" />
+      <workItem from="1758376052635" duration="1867000" />
+      <workItem from="1758378149909" duration="10429000" />
+      <workItem from="1758388609525" duration="3407000" />
+      <workItem from="1758434750931" duration="2739000" />
+      <workItem from="1758451571388" duration="6085000" />
+      <workItem from="1758458184792" duration="4861000" />
+      <workItem from="1758475901652" duration="836000" />
+      <workItem from="1758480347233" duration="63000" />
+      <workItem from="1758519158094" duration="12407000" />
+      <workItem from="1758558299162" duration="645000" />
+      <workItem from="1758559207167" duration="3336000" />
+      <workItem from="1758566628203" duration="1967000" />
+      <workItem from="1758568984456" duration="837000" />
+      <workItem from="1758569998149" duration="77000" />
+      <workItem from="1758609503762" duration="17718000" />
+      <workItem from="1758629496418" duration="12894000" />
+      <workItem from="1758727744407" duration="874000" />
+      <workItem from="1758733639592" duration="8635000" />
+      <workItem from="1758742829879" duration="338000" />
+      <workItem from="1758743185046" duration="3814000" />
+      <workItem from="1758747077357" duration="73000" />
+      <workItem from="1758747254380" duration="2405000" />
+      <workItem from="1758749720201" duration="88000" />
+      <workItem from="1758771670628" duration="21849000" />
+      <workItem from="1758797750910" duration="6236000" />
+      <workItem from="1758864609340" duration="826000" />
+      <workItem from="1758874083776" duration="26510000" />
+      <workItem from="1758900822757" duration="126000" />
+      <workItem from="1758901619884" duration="1301000" />
+      <workItem from="1758903062551" duration="5620000" />
+      <workItem from="1758910620789" duration="216000" />
+      <workItem from="1758910922275" duration="191000" />
+      <workItem from="1758912083455" duration="279000" />
+      <workItem from="1758948683274" duration="18620000" />
+      <workItem from="1758967921528" duration="324000" />
+      <workItem from="1758968261600" duration="348000" />
+      <workItem from="1758968626084" duration="191000" />
+      <workItem from="1758969105656" duration="87000" />
+      <workItem from="1758969774020" duration="667000" />
+      <workItem from="1759075183295" duration="420000" />
+      <workItem from="1759076114350" duration="371000" />
+      <workItem from="1759076692222" duration="389000" />
+      <workItem from="1759077140047" duration="11000" />
+    </task>
+    <task id="LOCAL-00024" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758781814526</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1758781814526</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758783092881</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1758783092881</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758783794000</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1758783794000</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758784530674</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1758784530674</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758785393921</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1758785393921</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758785943281</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1758785943281</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758786188010</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1758786188010</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758786286562</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1758786286562</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758786395057</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1758786395057</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758787841671</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1758787841671</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758790302779</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1758790302779</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758790380531</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1758790380531</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758791182738</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1758791182738</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758791635580</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1758791635580</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758792404429</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1758792404429</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758793486541</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1758793486541</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758794723099</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1758794723099</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758794895226</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1758794895226</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758795241360</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1758795241360</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758796350871</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1758796350871</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758798093066</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1758798093066</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758799898925</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1758799898925</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758801291357</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1758801291357</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758801977880</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1758801977880</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758802666044</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1758802666044</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758802989533</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1758802989533</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758803819128</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1758803819129</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758803984057</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1758803984057</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758864829481</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1758864829482</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758877912899</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1758877912900</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758878748198</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1758878748198</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758879794238</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1758879794238</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758882888549</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1758882888549</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758884413151</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1758884413151</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Этап 5 тесты">
+      <option name="closed" value="true" />
+      <created>1758885655640</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1758885655640</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Этап 6 оптимизация структуры">
+      <option name="closed" value="true" />
+      <created>1758888614349</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1758888614349</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Этап 6 оптимизация структуры">
+      <option name="closed" value="true" />
+      <created>1758889483543</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1758889483543</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Этап 6 оптимизация структуры">
+      <option name="closed" value="true" />
+      <created>1758890032771</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1758890032771</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Этап 6 оптимизация структуры">
+      <option name="closed" value="true" />
+      <created>1758899210751</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1758899210751</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Этап 6 оптимизация структуры">
+      <option name="closed" value="true" />
+      <created>1758900680136</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1758900680136</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Этап 6 оптимизация структуры">
+      <option name="closed" value="true" />
+      <created>1758906855541</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1758906855541</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Этап 6 оптимизация структуры">
+      <option name="closed" value="true" />
+      <created>1758908890552</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1758908890552</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Этап 7 документация.">
+      <option name="closed" value="true" />
+      <created>1758961353059</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1758961353059</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Этап 7 документация.">
+      <option name="closed" value="true" />
+      <created>1758962554979</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1758962554979</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Этап 7 документация.">
+      <option name="closed" value="true" />
+      <created>1758963394178</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1758963394178</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Этап 7 документация.">
+      <option name="closed" value="true" />
+      <created>1758963617100</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1758963617100</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Этап 7 документация. openapi работает">
+      <option name="closed" value="true" />
+      <created>1758966910377</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1758966910377</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Этап 7 документация. openapi работает">
+      <option name="closed" value="true" />
+      <created>1758968412199</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1758968412199</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Этап 7 документация. openapi работает">
+      <option name="closed" value="true" />
+      <created>1758970440845</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1758970440845</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="комит" />
+    <MESSAGE value="Этап 3, реализация JWT, готов" />
+    <MESSAGE value="Этап 3 готов" />
+    <MESSAGE value="Этап 3 оптимизация" />
+    <MESSAGE value="Этап 4 оптимизация" />
+    <MESSAGE value="Этап 5 тесты" />
+    <MESSAGE value="Этап 6 оптимизация структуры" />
+    <MESSAGE value="Этап 7 документация." />
+    <MESSAGE value="Этап 7 документация. openapi работает" />
+    <option name="LAST_COMMIT_MESSAGE" value="Этап 7 документация. openapi работает" />
+  </component>
+</project>
