@@ -1,0 +1,611 @@
+openapi: 3.0.3
+info:
+  title: Bank REST API
+  description: REST API для управления банковскими картами, пользователями и транзакциями
+  version: 4.7.0
+servers:
+  - url: http://localhost:8080
+    description: Локальный сервер
+security:
+  - bearerAuth: []
+paths:
+  /api/auth/login:
+    post:
+      summary: Аутентификация пользователя
+      description: Аутентификация пользователя и получение JWT токена
+      operationId: login
+      tags:
+        - Аутентификация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthRequest'
+            example:
+              username: user1
+              password: password123
+      responses:
+        '200':
+          description: Успешная аутентификация
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+              example:
+                token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+        '401':
+          description: Неверные учетные данные
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/admin/users:
+    post:
+      summary: Создание пользователя (админ)
+      description: Создание нового пользователя администратором
+      operationId: createUser
+      tags:
+        - Администрирование
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRequest'
+            example:
+              username: newuser
+              password: password123
+              roles: [USER]
+      responses:
+        '201':
+          description: Пользователь создан
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        '400':
+          description: Неверные данные запроса
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    get:
+      summary: Получение списка пользователей (админ)
+      description: Получение списка всех пользователей
+      operationId: getAllUsers
+      tags:
+        - Администрирование
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Список пользователей
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserResponse'
+  /api/admin/users/{id}:
+    get:
+      summary: Получение пользователя по ID (админ)
+      description: Получение информации о пользователе по его ID
+      operationId: getUserById
+      tags:
+        - Администрирование
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Информация о пользователе
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        '404':
+          description: Пользователь не найден
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      summary: Обновление пользователя (админ)
+      description: Обновление данных пользователя администратором
+      operationId: updateUser
+      tags:
+        - Администрирование
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRequest'
+      responses:
+        '200':
+          description: Пользователь обновлен
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        '404':
+          description: Пользователь не найден
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      summary: Удаление пользователя (админ)
+      description: Удаление пользователя по ID
+      operationId: deleteUser
+      tags:
+        - Администрирование
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '204':
+          description: Пользователь удален
+        '404':
+          description: Пользователь не найден
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/admin/cards:
+    post:
+      summary: Создание карты (админ)
+      description: Создание новой карты администратором
+      operationId: createCard
+      tags:
+        - Карты (Админ)
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CardRequest'
+            example:
+              userId: 1
+              cardNumber: "1234567890123456"
+              expiryDate: "2025-12"
+              cvv: "123"
+              balance: 1000.00
+      responses:
+        '201':
+          description: Карта создана
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardResponse'
+        '400':
+          description: Неверные данные запроса
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    get:
+      summary: Получение списка карт (админ)
+      description: Получение списка всех карт
+      operationId: getAllCards
+      tags:
+        - Карты (Админ)
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Список карт
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CardResponse'
+  /api/admin/cards/{id}:
+    get:
+      summary: Получение карты по ID (админ)
+      description: Получение информации о карте по её ID
+      operationId: getCardById
+      tags:
+        - Карты (Админ)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Информация о карте
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardResponse'
+        '404':
+          description: Карта не найдена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      summary: Обновление карты (админ)
+      description: Обновление данных карты администратором
+      operationId: updateCard
+      tags:
+        - Карты (Админ)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CardUpdateRequest'
+      responses:
+        '200':
+          description: Карта обновлена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardResponse'
+        '404':
+          description: Карта не найдена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      summary: Удаление карты (админ)
+      description: Удаление карты по ID
+      operationId: deleteCard
+      tags:
+        - Карты (Админ)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '204':
+          description: Карта удалена
+        '404':
+          description: Карта не найдена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/user/cards:
+    get:
+      summary: Получение карт пользователя
+      description: Получение списка карт текущего пользователя
+      operationId: getUserCards
+      tags:
+        - Карты (Пользователь)
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Список карт пользователя
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CardResponse'
+  /api/user/cards/{id}:
+    get:
+      summary: Получение карты пользователя по ID
+      description: Получение информации о карте пользователя по её ID
+      operationId: getUserCardById
+      tags:
+        - Карты (Пользователь)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Информация о карте
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardResponse'
+        '404':
+          description: Карта не найдена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/user/cards/{id}/transactions:
+    post:
+      summary: Создание транзакции
+      description: Создание новой транзакции с карты пользователя
+      operationId: createTransaction
+      tags:
+        - Транзакции
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionRequest'
+            example:
+              recipientCardNumber: "9876543210987654"
+              amount: 100.00
+      responses:
+        '201':
+          description: Транзакция создана
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+        '400':
+          description: Неверные данные запроса
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    get:
+      summary: Получение транзакций карты
+      description: Получение списка транзакций по карте пользователя
+      operationId: getCardTransactions
+      tags:
+        - Транзакции
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Список транзакций
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TransactionResponse'
+components:
+  schemas:
+    AuthRequest:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Имя пользователя
+        password:
+          type: string
+          description: Пароль
+      required:
+        - username
+        - password
+    AuthResponse:
+      type: object
+      properties:
+        token:
+          type: string
+          description: JWT токен
+      required:
+        - token
+    UserRequest:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Имя пользователя
+        password:
+          type: string
+          description: Пароль
+        roles:
+          type: array
+          items:
+            type: string
+            enum: [USER, ADMIN]
+          description: Роли пользователя
+      required:
+        - username
+        - password
+        - roles
+    UserResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: ID пользователя
+        username:
+          type: string
+          description: Имя пользователя
+      required:
+        - id
+        - username
+    CardRequest:
+      type: object
+      properties:
+        userId:
+          type: integer
+          format: int64
+          description: ID пользователя
+        cardNumber:
+          type: string
+          description: Номер карты
+        expiryDate:
+          type: string
+          description: Срок действия карты (YYYY-MM)
+        cvv:
+          type: string
+          description: CVV код
+        balance:
+          type: number
+          format: double
+          description: Баланс карты
+      required:
+        - userId
+        - cardNumber
+        - expiryDate
+        - cvv
+        - balance
+    CardUpdateRequest:
+      type: object
+      properties:
+        cardNumber:
+          type: string
+          description: Номер карты
+        expiryDate:
+          type: string
+          description: Срок действия карты (YYYY-MM)
+        cvv:
+          type: string
+          description: CVV код
+        balance:
+          type: number
+          format: double
+          description: Баланс карты
+      required:
+        - cardNumber
+        - expiryDate
+        - cvv
+        - balance
+    CardResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: ID карты
+        userId:
+          type: integer
+          format: int64
+          description: ID пользователя
+        cardNumber:
+          type: string
+          description: Номер карты
+        expiryDate:
+          type: string
+          description: Срок действия карты (YYYY-MM)
+        balance:
+          type: number
+          format: double
+          description: Баланс карты
+      required:
+        - id
+        - userId
+        - cardNumber
+        - expiryDate
+        - balance
+    TransactionRequest:
+      type: object
+      properties:
+        recipientCardNumber:
+          type: string
+          description: Номер карты получателя
+        amount:
+          type: number
+          format: double
+          description: Сумма транзакции
+      required:
+        - recipientCardNumber
+        - amount
+    TransactionResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: ID транзакции
+        cardId:
+          type: integer
+          format: int64
+          description: ID карты отправителя
+        recipientCardNumber:
+          type: string
+          description: Номер карты получателя
+        amount:
+          type: number
+          format: double
+          description: Сумма транзакции
+        timestamp:
+          type: string
+          format: date-time
+          description: Время транзакции
+      required:
+        - id
+        - cardId
+        - recipientCardNumber
+        - amount
+        - timestamp
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Сообщение об ошибке
+        status:
+          type: integer
+          description: HTTP статус код
+      required:
+        - message
+        - status
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
