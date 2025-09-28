@@ -14,6 +14,7 @@
     <name>bank-rest</name>
     <description>REST API for bank card management system</description>
     <properties>
+
         <java.version>17</java.version>
         <jjwt.version>0.12.5</jjwt.version>
         <springdoc.version>2.6.0</springdoc.version>
@@ -22,10 +23,8 @@
         <jakarta-rs.version>3.1.0</jakarta-rs.version>
         <javax-rs.version>2.1.1</javax-rs.version> <!-- добавленный код: Версия для javax.ws.rs -->
 
-            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-            <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 
     </properties>
