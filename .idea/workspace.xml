@@ -7,10 +7,6 @@
     <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. openapi работает">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README_Bank_rest.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_Bank_rest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/CardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,9 +155,11 @@
       </method>
     </configuration>
     <configuration name="BankRestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bank-rest" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.bankcards.BankRestApplication" />
+      <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -257,15 +255,7 @@
       <workItem from="1759079783829" duration="111000" />
       <workItem from="1759080057286" duration="1006000" />
       <workItem from="1759081146188" duration="814000" />
-      <workItem from="1759081982586" duration="1344000" />
-    </task>
-    <task id="LOCAL-00027" summary="Этап 5 тесты">
-      <option name="closed" value="true" />
-      <created>1758784530674</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1758784530674</updated>
+      <workItem from="1759081982586" duration="1593000" />
     </task>
     <task id="LOCAL-00028" summary="Этап 5 тесты">
       <option name="closed" value="true" />
@@ -651,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759081069580</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Этап 7 документация. openapi работает">
+      <option name="closed" value="true" />
+      <created>1759083348289</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1759083348290</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
