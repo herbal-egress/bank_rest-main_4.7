@@ -7,6 +7,7 @@
     <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. openapi работает">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README_Bank_rest.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_Bank_rest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,74 +52,76 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdminCardControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdminCardControllerTestI.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdminControllerTest.deleteUser_ShouldDeleteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdminControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdminControllerTest.getUserById_ShouldReturnUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AllTestsSuite.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTest.authenticate_WithEmptyPassword_ShouldReturnBadRequest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTest.register_ShouldReturnToken.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardServiceTest.createCard_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardServiceTest.getCardById_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardServiceTest.updateCard_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CreateCardIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CreateUserIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EncryptionServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GetCardBalanceIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LoginIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionServiceTest.transfer_InsufficientFunds_ThrowsException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionServiceTest.transfer_SameCard_ThrowsException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionServiceTest.transfer_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserCardControllerTest.blockUserCard_ShouldBlockCard.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserCardControllerTest.blockUserCard_ShouldMessage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserCardControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserCardControllerTest.transfer_ShouldPerformTransfer.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserCardControllerTest.transfer_ShouldPerformTransfer_Integration.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.createUser_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bank-rest [-version].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bank-rest [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bank-rest [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bank-rest [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bank-rest [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bank-rest [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bank-rest [verify].executor&quot;: &quot;Run&quot;,
-    &quot;OpenAPI/Swagger Code Generator.openapi.yaml.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BankRestApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dIvan/Desktop/bank_rest-main_4.7&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "JUnit.AdminCardControllerTest.executor": "Run",
+    "JUnit.AdminCardControllerTestI.executor": "Run",
+    "JUnit.AdminControllerTest.deleteUser_ShouldDeleteUser.executor": "Run",
+    "JUnit.AdminControllerTest.executor": "Run",
+    "JUnit.AdminControllerTest.getUserById_ShouldReturnUser.executor": "Run",
+    "JUnit.AllTestsSuite.executor": "Run",
+    "JUnit.AuthControllerTest.authenticate_WithEmptyPassword_ShouldReturnBadRequest.executor": "Run",
+    "JUnit.AuthControllerTest.executor": "Run",
+    "JUnit.AuthControllerTest.register_ShouldReturnToken.executor": "Run",
+    "JUnit.CardServiceTest.createCard_Success.executor": "Run",
+    "JUnit.CardServiceTest.executor": "Run",
+    "JUnit.CardServiceTest.getCardById_Success.executor": "Run",
+    "JUnit.CardServiceTest.updateCard_Success.executor": "Run",
+    "JUnit.CreateCardIT.executor": "Run",
+    "JUnit.CreateUserIT.executor": "Run",
+    "JUnit.EncryptionServiceTest.executor": "Run",
+    "JUnit.GetCardBalanceIT.executor": "Run",
+    "JUnit.LoginIT.executor": "Run",
+    "JUnit.TransactionServiceTest.executor": "Run",
+    "JUnit.TransactionServiceTest.transfer_InsufficientFunds_ThrowsException.executor": "Run",
+    "JUnit.TransactionServiceTest.transfer_SameCard_ThrowsException.executor": "Run",
+    "JUnit.TransactionServiceTest.transfer_Success.executor": "Run",
+    "JUnit.UserCardControllerTest.blockUserCard_ShouldBlockCard.executor": "Run",
+    "JUnit.UserCardControllerTest.blockUserCard_ShouldMessage.executor": "Run",
+    "JUnit.UserCardControllerTest.executor": "Run",
+    "JUnit.UserCardControllerTest.transfer_ShouldPerformTransfer.executor": "Run",
+    "JUnit.UserCardControllerTest.transfer_ShouldPerformTransfer_Integration.executor": "Run",
+    "JUnit.UserServiceTest.createUser_Success.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "Maven.bank-rest [-version].executor": "Run",
+    "Maven.bank-rest [clean].executor": "Run",
+    "Maven.bank-rest [compile].executor": "Run",
+    "Maven.bank-rest [install].executor": "Run",
+    "Maven.bank-rest [package].executor": "Run",
+    "Maven.bank-rest [spring-boot:run].executor": "Run",
+    "Maven.bank-rest [spring-boot:stop].executor": "Run",
+    "Maven.bank-rest [test].executor": "Run",
+    "Maven.bank-rest [verify].executor": "Run",
+    "OpenAPI/Swagger Code Generator.openapi.yaml.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BankRestApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/dIvan/Desktop/bank_rest-main_4.7",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dIvan\Desktop\bank_rest-main_4.7" />
@@ -239,15 +242,7 @@
       <workItem from="1759077140047" duration="11000" />
       <workItem from="1759079686913" duration="26000" />
       <workItem from="1759079783829" duration="111000" />
-      <workItem from="1759080057286" duration="64000" />
-    </task>
-    <task id="LOCAL-00025" summary="Этап 5 тесты">
-      <option name="closed" value="true" />
-      <created>1758783092881</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1758783092881</updated>
+      <workItem from="1759080057286" duration="987000" />
     </task>
     <task id="LOCAL-00026" summary="Этап 5 тесты">
       <option name="closed" value="true" />
@@ -633,7 +628,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759079829011</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Этап 7 документация. openapi работает">
+      <option name="closed" value="true" />
+      <created>1759080130118</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1759080130118</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
