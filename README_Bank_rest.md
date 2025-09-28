@@ -19,10 +19,10 @@ JWT-аутентификацию, маскирование номеров кар
 ## 1 - Запуск через Maven после скачивания из репозитория
 
 **Копирование репозитория**
-   - Скачайте архив проекта https://github.com/herbal-egress/bank_rest-main_4.5/archive/refs/heads/master.zip и распакуйте в папку c:\bank_rest-main_4.5
+   - Скачайте архив проекта https://github.com/herbal-egress/bank_rest-main_4.7/archive/refs/heads/master.zip и распакуйте в папку c:\bank_rest-main_4.7
    - Перейдите в папку проекта:
       ```bash
-      cd c:\bank_rest-main_4.5
+      cd c:\bank_rest-main_4.7
       ```
 
 1. **Подготовка окружения**
@@ -125,11 +125,11 @@ JWT-аутентификацию, маскирование номеров кар
    - Убедитесь, что Git установлен: `git --version`.
    - Склонируйте репозиторий:
      ```bash
-     git clone https://github.com/herbal-egress/bank_rest-main_4.5.git
+     git clone https://github.com/herbal-egress/bank_rest-main_4.7.git
      ```
    - Перейдите в папку проекта:
      ```bash
-     cd bank_rest-main_4.5
+     cd bank_rest-main_4.7
      ```
 
 2. **Подготовка окружения**
