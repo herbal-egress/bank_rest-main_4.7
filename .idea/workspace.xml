@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. openapi работает">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/61589886-feb9-40b6-9f8c-94917b016e90/storage_v2/_src_/database/bankdb.unPFrA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/61589886-feb9-40b6-9f8c-94917b016e90/storage_v2/_src_/database/bankdb.unPFrA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README_Bank_rest.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_Bank_rest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/openapi.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,15 +238,8 @@
       <workItem from="1759076692222" duration="389000" />
       <workItem from="1759077140047" duration="11000" />
       <workItem from="1759079686913" duration="26000" />
-      <workItem from="1759079783829" duration="31000" />
-    </task>
-    <task id="LOCAL-00024" summary="Этап 5 тесты">
-      <option name="closed" value="true" />
-      <created>1758781814526</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1758781814526</updated>
+      <workItem from="1759079783829" duration="111000" />
+      <workItem from="1759080057286" duration="64000" />
     </task>
     <task id="LOCAL-00025" summary="Этап 5 тесты">
       <option name="closed" value="true" />
@@ -636,7 +625,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758970440845</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Этап 7 документация. openapi работает">
+      <option name="closed" value="true" />
+      <created>1759079829011</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1759079829011</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
