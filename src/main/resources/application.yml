@@ -54,7 +54,7 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 server:
-  port: 8090
+  port: 8091
   servlet:
     session:
       cookie:
