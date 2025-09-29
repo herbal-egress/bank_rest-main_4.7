@@ -1,5 +1,3 @@
-
-
 REST API для управления банковскими картами, транзакциями и пользователями. Приложение реализовано с использованием
 Java 17, Spring Boot, Spring Security, PostgreSQL, Liquibase и Docker. Поддерживает роли `ADMIN` и `USER`,
 JWT-аутентификацию, маскирование номеров карт и документирование API через Swagger UI.
@@ -8,15 +6,13 @@ JWT-аутентификацию, маскирование номеров кар
 - логи в консоли реализованы на русском языке;
 - переменные среды НЕ использованы.
 
-#
-
+## Требования
 - Java 17
 - Maven 3.8+
 - Docker и Docker Compose
 - IntelliJ IDEA (для запуска через IDE)
 
-#
-#
+## Запуск через Maven после скачивания из репозитория
 
 **Копирование репозитория**
    - Скачайте архив проекта https://github.com/herbal-egress/bank_rest-main_4.7/archive/refs/heads/master.zip и распакуйте в папку c:\bank_rest-main_4.7-master
@@ -26,7 +22,7 @@ JWT-аутентификацию, маскирование номеров кар
       ```
 
 1. **Подготовка окружения**
-   - Убедитесь, что Java 17 и Maven установлены:
+   - Убедитесь, что Java 17+ и Maven 3.8+ установлены:
    ```bash
    java -version
    ```
@@ -87,43 +83,3 @@ JWT-аутентификацию, маскирование номеров кар
   ```bash
   docker-compose down
   ```
-
-
-#
-
-1. **Подготовка окружения**
-   - Убедитесь, что Java 17 и IntelliJ IDEA установлены.
-   - Установите Docker Desktop (Windows/Mac) или Docker (Linux): https://www.docker.com/get-started.
-   - Проверьте, что Docker запущен: `docker --version`.
-
-2. **Настройка PostgreSQL через Docker**
-   - Откройте терминал в IntelliJ IDEA или PowerShell.
-   - Убедитесь, что `docker-compose.yml` находится в корне проекта.
-   - Выполните:
-     ```bash
-     docker-compose up -d
-     ```
-   - Проверьте, что контейнер `bank_postgres` работает: `docker ps`.
-
-3. **Импорт проекта**
-   - Откройте IntelliJ IDEA.
-   - Выберите `File > Open` и укажите корневую папку проекта (`pom.xml`).
-   - Дождитесь завершения индексации и загрузки зависимостей Maven.
-
-4. **Настройка конфигурации запуска**
-   - Нажмите `Add Configuration` в верхнем правом углу.
-   - Выберите `+ > Spring Boot`.
-   - Укажите:
-     - Main class: `com.example.bankcards.BankRestApplication`
-     - Active profiles: `dev`
-     - VM options: `-Dfile.encoding=UTF-8`
-   - Сохраните конфигурацию.
-
-5. **Генерация кода через Maven**
-   - Откройте вкладку `Maven` в IntelliJ IDEA (справа).
-   - Выполните: `bank-rest > Lifecycle > clean`, затем `generate-sources`.
-
-6. **Запуск и проверка**
-   - Запустите приложение, нажав `Run` (зеленый треугольник) для созданной конфигурации.
-   - Откройте Swagger UI: `http://localhost:8080/swagger-ui.html`
-   - В открывшемся UI начните работу с раздела "Аутентификация" как в предыдущей инструкции.

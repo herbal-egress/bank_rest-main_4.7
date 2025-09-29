@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. openapi работает">
+    <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. доработан Readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_Bank_rest.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_Bank_rest.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +144,7 @@
       <recent name="com.example.bankcards.service.Impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="Spring Boot.BankRestApplication">
     <configuration name="AllTestsSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank-rest" />
       <option name="PACKAGE_NAME" value="" />
@@ -185,8 +185,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="JUnit.AllTestsSuite" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -261,15 +261,7 @@
       <workItem from="1759085016074" duration="97000" />
       <workItem from="1759087526521" duration="13000" />
       <workItem from="1759124754234" duration="5642000" />
-      <workItem from="1759130753078" duration="139000" />
-    </task>
-    <task id="LOCAL-00039" summary="Этап 5 тесты">
-      <option name="closed" value="true" />
-      <created>1758793486541</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1758793486541</updated>
+      <workItem from="1759130753078" duration="784000" />
     </task>
     <task id="LOCAL-00040" summary="Этап 5 тесты">
       <option name="closed" value="true" />
@@ -655,7 +647,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759130394230</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Этап 7 документация. доработан Readme">
+      <option name="closed" value="true" />
+      <created>1759131014413</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1759131014414</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,6 +682,7 @@
     <MESSAGE value="Этап 6 оптимизация структуры" />
     <MESSAGE value="Этап 7 документация." />
     <MESSAGE value="Этап 7 документация. openapi работает" />
-    <option name="LAST_COMMIT_MESSAGE" value="Этап 7 документация. openapi работает" />
+    <MESSAGE value="Этап 7 документация. доработан Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Этап 7 документация. доработан Readme" />
   </component>
 </project>
