@@ -1,6 +1,9 @@
 package com.example.bankcards.dto.transaction;
+
 import lombok.Data;
+
 import java.time.LocalDateTime;
+
 @Data
 public class TransactionResponse {
     private Long id;

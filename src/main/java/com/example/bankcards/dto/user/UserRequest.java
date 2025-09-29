@@ -1,8 +1,11 @@
 package com.example.bankcards.dto.user;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+
 import java.util.Set;
+
 @Data
 public class UserRequest {
     @NotBlank(message = "Имя пользователя не может быть пустым")

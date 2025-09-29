@@ -1,12 +1,15 @@
 package com.example.bankcards.dto.card;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import jakarta.validation.constraints.Min;
 import lombok.Data;
+
 import java.time.YearMonth;
+
 @Schema(description = "Запрос на создание банковской карты")
 @Data
 public class CardRequest {

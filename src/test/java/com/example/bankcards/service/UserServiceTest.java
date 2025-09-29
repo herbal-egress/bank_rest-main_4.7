@@ -1,12 +1,12 @@
 package com.example.bankcards.service;
+
 import com.example.bankcards.dto.user.UserRequest;
 import com.example.bankcards.dto.user.UserResponse;
 import com.example.bankcards.entity.Role;
 import com.example.bankcards.entity.User;
-import com.example.bankcards.exception.UserNotFoundException;
 import com.example.bankcards.exception.UsernameAlreadyExistsException;
-import com.example.bankcards.repository.UserRepository;
 import com.example.bankcards.repository.RoleRepository;
+import com.example.bankcards.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +14,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.test.context.support.WithMockUser;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+
 @SpringBootTest
 class UserServiceTest {
     @Autowired
@@ -31,6 +34,7 @@ class UserServiceTest {
     private PasswordEncoder passwordEncoder;
     private UserRequest userRequest;
     private User mockUser;
+
     @BeforeEach
     void setUp() {
         userRequest = new UserRequest();
@@ -47,6 +51,7 @@ class UserServiceTest {
         when(userRepository.findById(1L)).thenReturn(Optional.of(mockUser));
         when(roleRepository.findByName(Role.RoleType.USER)).thenReturn(Optional.of(createRole(Role.RoleType.USER)));
     }
+
     @Test
     @WithMockUser(username = "admin", roles = {"ADMIN"})
     void createUser_Success() {
@@ -64,6 +69,7 @@ class UserServiceTest {
         verify(passwordEncoder, times(1)).encode("password");
         verify(userRepository, times(1)).save(any(User.class));
     }
+
     @Test
     @WithMockUser(username = "admin", roles = {"ADMIN"})
     void createUser_UsernameExists_ThrowsException() {
@@ -72,6 +78,7 @@ class UserServiceTest {
         assertThrows(UsernameAlreadyExistsException.class, () -> userService.createUser(userRequest));
         verify(userRepository, times(1)).findByUsername("user");
     }
+
     @Test
     @WithMockUser(username = "user")
     void getUserById_Success() {
@@ -80,6 +87,7 @@ class UserServiceTest {
         assertEquals("user", response.getUsername());
         verify(userRepository, times(1)).findById(1L);
     }
+
     @Test
     @WithMockUser(username = "admin", roles = {"ADMIN"})
     void getAllUsers_Success() {
@@ -88,6 +96,7 @@ class UserServiceTest {
         assertEquals(1, response.size());
         verify(userRepository, times(1)).findAll();
     }
+
     @Test
     @WithMockUser(username = "user")
     void updateUser_Success() {
@@ -101,6 +110,7 @@ class UserServiceTest {
         verify(passwordEncoder, times(1)).encode("newpassword");
         verify(userRepository, times(1)).save(any(User.class));
     }
+
     @Test
     @WithMockUser(username = "admin", roles = {"ADMIN"})
     void deleteUser_Success() {
@@ -109,6 +119,7 @@ class UserServiceTest {
         verify(userRepository, times(1)).existsById(1L);
         verify(userRepository, times(1)).deleteById(1L);
     }
+
     private Role createRole(Role.RoleType roleType) {
         Role role = new Role();
         role.setName(roleType);

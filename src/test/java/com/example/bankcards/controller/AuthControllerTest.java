@@ -1,10 +1,10 @@
 package com.example.bankcards.controller;
+
 import com.example.bankcards.dto.auth.AuthRequest;
 import com.example.bankcards.dto.auth.AuthResponse;
 import com.example.bankcards.service.auth.AuthService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,12 +13,13 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.jdbc.Sql;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
@@ -33,6 +34,7 @@ class AuthControllerTest {
     private AuthService authService;
     @Autowired
     private ObjectMapper objectMapper;
+
     @Test
     void authenticate_ShouldReturnToken() throws Exception {
         AuthRequest authRequest = new AuthRequest();
@@ -57,6 +59,7 @@ class AuthControllerTest {
         verify(authService, times(1)).authenticate(any(AuthRequest.class));
         verifyNoMoreInteractions(authService);
     }
+
     @Test
     void authenticate_WithInvalidCredentials_ShouldReturnUnauthorized() throws Exception {
         AuthRequest authRequest = new AuthRequest();
@@ -71,6 +74,7 @@ class AuthControllerTest {
         verify(authService, times(1)).authenticate(any(AuthRequest.class));
         verifyNoMoreInteractions(authService);
     }
+
     @Test
     void authenticate_WithEmptyUsername_ShouldReturnBadRequest() throws Exception {
         AuthRequest authRequest = new AuthRequest();
@@ -79,11 +83,12 @@ class AuthControllerTest {
         mockMvc.perform(post("/auth/login")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(authRequest)))
-                .andExpect(status().isBadRequest())  
+                .andExpect(status().isBadRequest())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.fieldErrors.username").value("Имя пользователя не может быть пустым"));  
+                .andExpect(jsonPath("$.fieldErrors.username").value("Имя пользователя не может быть пустым"));
         verifyNoInteractions(authService);
     }
+
     @Test
     void authenticate_WithEmptyPassword_ShouldReturnBadRequest() throws Exception {
         AuthRequest authRequest = new AuthRequest();
@@ -92,11 +97,12 @@ class AuthControllerTest {
         mockMvc.perform(post("/auth/login")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(authRequest)))
-                .andExpect(status().isBadRequest())  
+                .andExpect(status().isBadRequest())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.fieldErrors.password").value("Пароль не может быть пустым"));  
+                .andExpect(jsonPath("$.fieldErrors.password").value("Пароль не может быть пустым"));
         verifyNoInteractions(authService);
     }
+
     @Test
     void authenticate_WithAdminUser_ShouldReturnAdminRole() throws Exception {
         AuthRequest authRequest = new AuthRequest();
@@ -121,6 +127,7 @@ class AuthControllerTest {
         verify(authService, times(1)).authenticate(any(AuthRequest.class));
         verifyNoMoreInteractions(authService);
     }
+
     @Test
     void register_ShouldReturnToken() throws Exception {
         AuthRequest authRequest = new AuthRequest();
@@ -132,8 +139,8 @@ class AuthControllerTest {
         authResponse.setToken("jwt-token-new");
         authResponse.setType("Bearer");
         authResponse.setExpiration(System.currentTimeMillis() + 3600000);
-        when(authService.authenticate(any(AuthRequest.class))).thenReturn(authResponse); 
-        mockMvc.perform(post("/auth/login") 
+        when(authService.authenticate(any(AuthRequest.class))).thenReturn(authResponse);
+        mockMvc.perform(post("/auth/login")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(authRequest)))
                 .andExpect(status().isOk())
@@ -141,7 +148,7 @@ class AuthControllerTest {
                 .andExpect(jsonPath("$.username").value("newuser"))
                 .andExpect(jsonPath("$.roles[0]").value("ROLE_USER"))
                 .andExpect(jsonPath("$.token").value("jwt-token-new"));
-        verify(authService, times(1)).authenticate(any(AuthRequest.class)); 
+        verify(authService, times(1)).authenticate(any(AuthRequest.class));
         verifyNoMoreInteractions(authService);
     }
 }

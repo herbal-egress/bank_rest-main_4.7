@@ -1,4 +1,5 @@
 package com.example.bankcards.controller;
+
 import com.example.bankcards.dto.card.CardRequest;
 import com.example.bankcards.dto.card.CardResponse;
 import com.example.bankcards.dto.card.CardUpdateRequest;
@@ -19,8 +20,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
+
 import static io.swagger.v3.oas.annotations.enums.SecuritySchemeType.HTTP;
+
 @SecurityScheme(
         name = "bearerAuth",
         type = HTTP,
@@ -36,6 +40,7 @@ import static io.swagger.v3.oas.annotations.enums.SecuritySchemeType.HTTP;
 @Slf4j
 public class AdminCardController {
     private final CardService cardService;
+
     @PostMapping("/cards")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
@@ -63,6 +68,7 @@ public class AdminCardController {
         CardResponse createdCard = cardService.createCard(cardRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdCard);
     }
+
     @GetMapping("/cards")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
@@ -79,6 +85,7 @@ public class AdminCardController {
         List<CardResponse> cards = cardService.getAllCards();
         return ResponseEntity.ok(cards);
     }
+
     @PutMapping("/cards/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
@@ -111,6 +118,7 @@ public class AdminCardController {
         CardResponse updatedCard = cardService.updateCard(id, cardUpdateRequest);
         return ResponseEntity.ok(updatedCard);
     }
+
     @DeleteMapping("/cards/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
@@ -129,6 +137,7 @@ public class AdminCardController {
         cardService.deleteCard(id);
         return ResponseEntity.noContent().build();
     }
+
     @PostMapping("/cards/{id}/block")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
@@ -148,6 +157,7 @@ public class AdminCardController {
         CardResponse blockedCard = cardService.blockCard(id);
         return ResponseEntity.ok(blockedCard);
     }
+
     @PostMapping("/cards/{id}/activate")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(

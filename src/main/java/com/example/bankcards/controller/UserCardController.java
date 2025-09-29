@@ -1,4 +1,5 @@
 package com.example.bankcards.controller;
+
 import com.example.bankcards.dto.card.CardResponse;
 import com.example.bankcards.dto.transaction.TransactionRequest;
 import com.example.bankcards.dto.transaction.TransactionResponse;
@@ -31,8 +32,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.Map;
+
 import static io.swagger.v3.oas.annotations.enums.SecuritySchemeType.HTTP;
+
 @SecurityScheme(
         name = "bearerAuth",
         type = HTTP,
@@ -50,6 +54,7 @@ public class UserCardController {
     private final CardService cardService;
     private final UserRepository userRepository;
     private final TransactionService transactionService;
+
     @GetMapping("/cards")
     @PreAuthorize("hasRole('USER')")
     @Operation(
@@ -82,6 +87,7 @@ public class UserCardController {
         Page<CardResponse> cards = cardService.getUserCards(currentUserId, pageable);
         return ResponseEntity.ok(cards);
     }
+
     @PostMapping("/cards/{id}/block")
     @PreAuthorize("hasRole('USER')")
     @Operation(
@@ -112,6 +118,7 @@ public class UserCardController {
                 card.getOwnerName(), currentUserId, card.getMaskedCardNumber(), id);
         return ResponseEntity.ok("{\"message\": \"" + responseMessage + "\"}");
     }
+
     @GetMapping("/cards/{id}/balance")
     @PreAuthorize("hasRole('USER')")
     @Operation(
@@ -140,6 +147,7 @@ public class UserCardController {
         Map<String, Double> response = Map.of("balance", card.getBalance());
         return ResponseEntity.ok(response);
     }
+
     @PostMapping("/transactions/transfer")
     @PreAuthorize("hasRole('USER')")
     @Operation(
@@ -159,6 +167,7 @@ public class UserCardController {
         TransactionResponse response = transactionService.transfer(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
+
     private Long getCurrentUserId() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || !authentication.isAuthenticated()) {

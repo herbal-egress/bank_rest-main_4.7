@@ -4,9 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. доработан Readme">
+    <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="комит">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/61589886-feb9-40b6-9f8c-94917b016e90.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/61589886-feb9-40b6-9f8c-94917b016e90.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/61589886-feb9-40b6-9f8c-94917b016e90/storage_v2/_src_/database/bankdb.unPFrA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/61589886-feb9-40b6-9f8c-94917b016e90/storage_v2/_src_/database/bankdb.unPFrA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_Bank_rest.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_Bank_rest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/BankRestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/BankRestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/config/JpaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/controller/AdminCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/controller/AdminCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/controller/UserCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/controller/UserCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/auth/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/auth/AuthRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/auth/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/auth/AuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/card/CardRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/card/CardRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/card/CardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/card/CardResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/card/CardUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/card/CardUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/transaction/TransactionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/transaction/TransactionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/transaction/TransactionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/transaction/TransactionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/user/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/user/UserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/user/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/dto/user/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/entity/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/entity/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/entity/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/AuthenticationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/AuthenticationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/CardNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/CardNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/CardNumberAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/CardNumberAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/InsufficientFundsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/InsufficientFundsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/InvalidCardOperationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/InvalidCardOperationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/InvalidRoleException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/InvalidRoleException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/InvalidTokenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/InvalidTokenException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/NegativeBalanceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/NegativeBalanceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/SameCardTransferException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/SameCardTransferException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/UsernameAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/exception/UsernameAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/security/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/EncryptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/EncryptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/auth/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/auth/UserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/auth/UserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/CardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/EncryptionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/EncryptionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/TransactionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/auth/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/auth/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/auth/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/service/impl/auth/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/util/CardUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/util/CardUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/util/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/util/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/util/UserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankcards/util/YearMonthAttributeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankcards/util/YearMonthAttributeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.changelog-master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AllTestsSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AllTestsSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankcards/controller/AdminCardControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankcards/controller/AdminCardControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankcards/controller/AdminControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankcards/controller/AdminControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankcards/controller/AuthControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankcards/controller/AuthControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankcards/controller/UserCardControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankcards/controller/UserCardControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankcards/service/CardServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankcards/service/CardServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankcards/service/EncryptionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankcards/service/EncryptionServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankcards/service/TransactionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankcards/service/TransactionServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankcards/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankcards/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,23 +330,7 @@
       <workItem from="1759124754234" duration="5642000" />
       <workItem from="1759130753078" duration="889000" />
       <workItem from="1759132359895" duration="810000" />
-      <workItem from="1759133205264" duration="867000" />
-    </task>
-    <task id="LOCAL-00043" summary="Этап 5 тесты">
-      <option name="closed" value="true" />
-      <created>1758796350871</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1758796350871</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Этап 5 тесты">
-      <option name="closed" value="true" />
-      <created>1758798093066</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1758798093066</updated>
+      <workItem from="1759133205264" duration="2198000" />
     </task>
     <task id="LOCAL-00045" summary="Этап 5 тесты">
       <option name="closed" value="true" />
@@ -655,7 +708,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759132956484</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="комит">
+      <option name="closed" value="true" />
+      <created>1759134108951</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1759134108952</updated>
+    </task>
+    <task id="LOCAL-00093" summary="комит">
+      <option name="closed" value="true" />
+      <created>1759134134875</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1759134134875</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,7 +742,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="комит" />
     <MESSAGE value="Этап 3, реализация JWT, готов" />
     <MESSAGE value="Этап 3 готов" />
     <MESSAGE value="Этап 3 оптимизация" />
@@ -683,6 +751,7 @@
     <MESSAGE value="Этап 7 документация." />
     <MESSAGE value="Этап 7 документация. openapi работает" />
     <MESSAGE value="Этап 7 документация. доработан Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Этап 7 документация. доработан Readme" />
+    <MESSAGE value="комит" />
+    <option name="LAST_COMMIT_MESSAGE" value="комит" />
   </component>
 </project>

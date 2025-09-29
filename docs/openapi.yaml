@@ -7,7 +7,7 @@ servers:
   - url: http://localhost:8080
     description: Локальный сервер
 security:
-  - bearerAuth: []
+  - bearerAuth: [ ]
 paths:
   /api/auth/login:
     post:
@@ -48,7 +48,7 @@ paths:
       tags:
         - Администрирование
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       requestBody:
         required: true
         content:
@@ -58,7 +58,7 @@ paths:
             example:
               username: newuser
               password: password123
-              roles: [USER]
+              roles: [ USER ]
       responses:
         '201':
           description: Пользователь создан
@@ -79,7 +79,7 @@ paths:
       tags:
         - Администрирование
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       responses:
         '200':
           description: Список пользователей
@@ -97,7 +97,7 @@ paths:
       tags:
         - Администрирование
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       parameters:
         - name: id
           in: path
@@ -125,7 +125,7 @@ paths:
       tags:
         - Администрирование
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       parameters:
         - name: id
           in: path
@@ -159,7 +159,7 @@ paths:
       tags:
         - Администрирование
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       parameters:
         - name: id
           in: path
@@ -184,7 +184,7 @@ paths:
       tags:
         - Карты (Админ)
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       requestBody:
         required: true
         content:
@@ -217,7 +217,7 @@ paths:
       tags:
         - Карты (Админ)
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       responses:
         '200':
           description: Список карт
@@ -235,7 +235,7 @@ paths:
       tags:
         - Карты (Админ)
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       parameters:
         - name: id
           in: path
@@ -263,7 +263,7 @@ paths:
       tags:
         - Карты (Админ)
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       parameters:
         - name: id
           in: path
@@ -297,7 +297,7 @@ paths:
       tags:
         - Карты (Админ)
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       parameters:
         - name: id
           in: path
@@ -322,7 +322,7 @@ paths:
       tags:
         - Карты (Пользователь)
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       responses:
         '200':
           description: Список карт пользователя
@@ -340,7 +340,7 @@ paths:
       tags:
         - Карты (Пользователь)
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       parameters:
         - name: id
           in: path
@@ -369,7 +369,7 @@ paths:
       tags:
         - Транзакции
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       parameters:
         - name: id
           in: path
@@ -406,7 +406,7 @@ paths:
       tags:
         - Транзакции
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
       parameters:
         - name: id
           in: path
@@ -458,7 +458,7 @@ components:
           type: array
           items:
             type: string
-            enum: [USER, ADMIN]
+            enum: [ USER, ADMIN ]
           description: Роли пользователя
       required:
         - username

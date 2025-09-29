@@ -1,19 +1,16 @@
 package com.example.bankcards.entity;
-import com.example.bankcards.util.YearMonthAttributeConverter; 
+
+import com.example.bankcards.util.YearMonthAttributeConverter;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.*;
+
 import java.time.YearMonth;
-import com.example.bankcards.entity.Transaction;
 import java.util.ArrayList;
 import java.util.List;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+
 @Entity
 @Table(name = "cards")
 @Getter
@@ -35,7 +32,7 @@ public class Card {
     private String ownerName;
     @NotNull
     @Column(nullable = false)
-    @Convert(converter = YearMonthAttributeConverter.class) 
+    @Convert(converter = YearMonthAttributeConverter.class)
     private YearMonth expirationDate;
     @NotNull
     @Enumerated(EnumType.STRING)
@@ -52,6 +49,7 @@ public class Card {
     private List<Transaction> transactionsFrom = new ArrayList<>();
     @OneToMany(mappedBy = "toCard", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Transaction> transactionsTo = new ArrayList<>();
+
     public enum Status {
         ACTIVE,
         BLOCKED,

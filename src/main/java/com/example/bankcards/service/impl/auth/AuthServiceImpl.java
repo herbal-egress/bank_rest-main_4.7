@@ -1,17 +1,19 @@
 package com.example.bankcards.service.impl.auth;
+
 import com.example.bankcards.dto.auth.AuthRequest;
 import com.example.bankcards.dto.auth.AuthResponse;
-import com.example.bankcards.util.JwtUtil;
 import com.example.bankcards.service.auth.AuthService;
 import com.example.bankcards.service.auth.UserDetailsService;
+import com.example.bankcards.util.JwtUtil;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -19,6 +21,7 @@ public class AuthServiceImpl implements AuthService {
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
     private final UserDetailsService userDetailsService;
+
     @Override
     public AuthResponse authenticate(AuthRequest authRequest) {
         log.debug("Начало процесса аутентификации для пользователя: {}", authRequest.getUsername());

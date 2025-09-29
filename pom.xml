@@ -15,19 +15,15 @@
     <description>REST API for bank card management system</description>
     <packaging>war</packaging>
     <properties>
-
         <java.version>17</java.version>
         <jjwt.version>0.12.5</jjwt.version>
         <springdoc.version>2.6.0</springdoc.version>
         <gson.version>2.10.1</gson.version>
         <okhttp.version>4.12.0</okhttp.version>
         <jakarta-rs.version>3.1.0</jakarta-rs.version>
-        <javax-rs.version>2.1.1</javax-rs.version> <!-- добавленный код: Версия для javax.ws.rs -->
-
+        <javax-rs.version>2.1.1</javax-rs.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-
     </properties>
     <dependencies>
         <dependency>
@@ -146,7 +142,6 @@
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
             <version>${javax-rs.version}</version>
-            <!-- добавленный код: Зависимость для поддержки javax.ws.rs, включая GenericType -->
         </dependency>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
@@ -168,7 +163,6 @@
             <artifactId>gson-fire</artifactId>
             <version>1.9.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
@@ -179,7 +173,6 @@
             <artifactId>jsr305</artifactId>
             <version>3.0.2</version>
         </dependency>
-
     </dependencies>
     <build>
         <plugins>

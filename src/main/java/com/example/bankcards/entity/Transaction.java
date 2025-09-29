@@ -1,10 +1,13 @@
 package com.example.bankcards.entity;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "transactions")
 @Getter
@@ -28,9 +31,10 @@ public class Transaction {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Status status;
+
     public enum Status {
-        SUCCESS,  
-        FAILED,   
-        PENDING   
+        SUCCESS,
+        FAILED,
+        PENDING
     }
 }

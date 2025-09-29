@@ -1,16 +1,20 @@
 package com.example.bankcards.util;
+
 import com.example.bankcards.entity.Role;
 import com.example.bankcards.repository.RoleRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+
 import java.util.HashSet;
 import java.util.Set;
-@Component 
+
+@Component
 @RequiredArgsConstructor
 @Slf4j
 public class UserUtils {
     private final RoleRepository roleRepository;
+
     public Set<Role> resolveRoles(Set<String> roleNames) {
         Set<Role> roles = new HashSet<>();
         if (roleNames == null || roleNames.isEmpty()) {

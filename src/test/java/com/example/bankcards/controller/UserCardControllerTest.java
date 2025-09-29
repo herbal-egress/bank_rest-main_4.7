@@ -1,19 +1,17 @@
 package com.example.bankcards.controller;
-import com.example.bankcards.dto.transaction.TransactionResponse;
-import com.example.bankcards.entity.Card;
-import com.example.bankcards.entity.Transaction;
-import com.example.bankcards.repository.CardRepository;
-import com.example.bankcards.repository.TransactionRepository;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import com.example.bankcards.dto.card.CardResponse;
 import com.example.bankcards.dto.transaction.TransactionRequest;
+import com.example.bankcards.entity.Card;
+import com.example.bankcards.entity.Transaction;
 import com.example.bankcards.entity.User;
+import com.example.bankcards.repository.CardRepository;
+import com.example.bankcards.repository.TransactionRepository;
 import com.example.bankcards.repository.UserRepository;
 import com.example.bankcards.service.CardService;
 import com.example.bankcards.service.TransactionService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,20 +25,24 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.jdbc.Sql;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.transaction.annotation.Transactional;
+
 import java.time.YearMonth;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+
 import static com.example.bankcards.entity.Card.Status.ACTIVE;
 import static com.example.bankcards.entity.Card.Status.BLOCKED;
-import static org.mockito.ArgumentMatchers.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
@@ -49,7 +51,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @Sql(scripts = "classpath:db/migration/sql/002-initial-data-test.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
 @Sql(scripts = "classpath:db/migration/sql/clear-schema-test.sql", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
 class UserCardControllerTest {
-    @Autowired 
+    @Autowired
     private TransactionRepository transactionRepository;
     @Autowired
     private CardRepository cardRepository;
@@ -63,6 +65,7 @@ class UserCardControllerTest {
     private UserRepository userRepository;
     @Autowired
     private ObjectMapper objectMapper;
+
     @Test
     @WithMockUser(username = "user")
     void getUserCards_ShouldReturnUserCards() throws Exception {
@@ -101,6 +104,7 @@ class UserCardControllerTest {
         verifyNoMoreInteractions(cardService);
         verify(userRepository, times(1)).findByUsername("user");
     }
+
     @Test
     @WithMockUser(username = "user")
     void getCardById_ShouldReturnCard() throws Exception {
@@ -122,6 +126,7 @@ class UserCardControllerTest {
         verifyNoMoreInteractions(cardService);
         verify(userRepository, times(1)).findByUsername("user");
     }
+
     @Test
     @WithMockUser(username = "user")
     void getCardById_WithBlockedStatus_ShouldReturnBlockedCard() throws Exception {
@@ -143,6 +148,7 @@ class UserCardControllerTest {
         verifyNoMoreInteractions(cardService);
         verify(userRepository, times(1)).findByUsername("user");
     }
+
     @Test
     @WithMockUser(username = "admin")
     void getUserCards_ForUser2_ShouldReturnUser2Cards() throws Exception {
@@ -171,6 +177,7 @@ class UserCardControllerTest {
         verifyNoMoreInteractions(cardService);
         verify(userRepository, times(1)).findByUsername("admin");
     }
+
     @Test
     @WithMockUser(username = "user")
     void blockUserCard_ShouldMessage() throws Exception {
@@ -193,6 +200,7 @@ class UserCardControllerTest {
         verifyNoMoreInteractions(cardService);
         verify(userRepository, times(1)).findByUsername("user");
     }
+
     @Test
     @WithMockUser(username = "user", roles = {"USER"})
     void transfer_ShouldPerformTransfer_Integration() throws Exception {

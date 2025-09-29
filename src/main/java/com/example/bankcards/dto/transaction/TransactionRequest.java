@@ -1,7 +1,9 @@
 package com.example.bankcards.dto.transaction;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+
 @Data
 public class TransactionRequest {
     @NotNull(message = "ID карты-отправителя обязателен")

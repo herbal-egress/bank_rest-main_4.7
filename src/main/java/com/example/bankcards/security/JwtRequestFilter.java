@@ -1,25 +1,29 @@
 package com.example.bankcards.security;
+
 import com.example.bankcards.service.auth.UserDetailsService;
 import com.example.bankcards.util.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+
 import java.io.IOException;
+
 @Component
 @RequiredArgsConstructor
 @Slf4j
 public class JwtRequestFilter extends OncePerRequestFilter {
     private final UserDetailsService userDetailsService;
     private final JwtUtil jwtUtil;
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain chain) throws ServletException, IOException {
@@ -58,19 +62,20 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         log.debug("=== КОНЕЦ JWT ФИЛЬТРА - передаем управление дальше ===");
         chain.doFilter(request, response);
     }
+
     @Override
     public boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         String path = request.getRequestURI();
         String[] publicPaths = {
-                "/auth/login",           
-                "/auth/**",              
-                "/swagger-ui.html",      
-                "/swagger-ui/**",        
-                "/v3/api-docs/**",       
-                "/v3/api-docs",          
-                "/v3/api-docs.yaml",     
-                "/actuator/health",      
-                "/actuator/**"           
+                "/auth/login",
+                "/auth/**",
+                "/swagger-ui.html",
+                "/swagger-ui/**",
+                "/v3/api-docs/**",
+                "/v3/api-docs",
+                "/v3/api-docs.yaml",
+                "/actuator/health",
+                "/actuator/**"
         };
         for (String publicPath : publicPaths) {
             if (path.equals(publicPath) || (publicPath.endsWith("**") && path.startsWith(publicPath.replace("/**", "")))) {

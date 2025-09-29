@@ -1,4 +1,5 @@
 package com.example.bankcards.controller;
+
 import com.example.bankcards.dto.user.UserRequest;
 import com.example.bankcards.dto.user.UserResponse;
 import com.example.bankcards.service.UserService;
@@ -18,8 +19,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
+
 import static io.swagger.v3.oas.annotations.enums.SecuritySchemeType.HTTP;
+
 @SecurityScheme(
         name = "bearerAuth",
         type = HTTP,
@@ -35,6 +39,7 @@ import static io.swagger.v3.oas.annotations.enums.SecuritySchemeType.HTTP;
 @Slf4j
 public class AdminController {
     private final UserService userService;
+
     @PostMapping
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
@@ -62,6 +67,7 @@ public class AdminController {
         UserResponse createdUser = userService.createUser(userRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
     }
+
     @GetMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
@@ -81,6 +87,7 @@ public class AdminController {
         UserResponse user = userService.getUserById(id);
         return ResponseEntity.ok(user);
     }
+
     @GetMapping
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
@@ -97,6 +104,7 @@ public class AdminController {
         List<UserResponse> users = userService.getAllUsers();
         return ResponseEntity.ok(users);
     }
+
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
@@ -129,6 +137,7 @@ public class AdminController {
         UserResponse updatedUser = userService.updateUser(id, userRequest);
         return ResponseEntity.ok(updatedUser);
     }
+
     @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(

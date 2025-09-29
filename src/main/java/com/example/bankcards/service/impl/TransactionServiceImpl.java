@@ -1,4 +1,5 @@
 package com.example.bankcards.service.impl;
+
 import com.example.bankcards.dto.transaction.TransactionRequest;
 import com.example.bankcards.dto.transaction.TransactionResponse;
 import com.example.bankcards.entity.Card;
@@ -19,8 +20,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import java.util.List;
-import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -28,6 +28,7 @@ public class TransactionServiceImpl implements TransactionService {
     private final TransactionRepository transactionRepository;
     private final CardRepository cardRepository;
     private final UserRepository userRepository;
+
     @Override
     @Transactional
     public TransactionResponse transfer(TransactionRequest request) {
@@ -70,6 +71,7 @@ public class TransactionServiceImpl implements TransactionService {
         log.info("Перевод успешно выполнен, ID транзакции: {}", savedTransaction.getId());
         return mapToResponse(savedTransaction);
     }
+
     private TransactionResponse mapToResponse(Transaction transaction) {
         TransactionResponse response = new TransactionResponse();
         response.setId(transaction.getId());
@@ -80,6 +82,7 @@ public class TransactionServiceImpl implements TransactionService {
         response.setStatus(transaction.getStatus().name());
         return response;
     }
+
     private Long getCurrentUserId() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || !authentication.isAuthenticated()) {

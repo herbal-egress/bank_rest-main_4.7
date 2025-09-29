@@ -1,9 +1,12 @@
 package com.example.bankcards.mapper;
+
 import com.example.bankcards.dto.user.UserResponse;
 import com.example.bankcards.entity.User;
 import org.springframework.stereotype.Component;
+
 import java.util.stream.Collectors;
-@Component 
+
+@Component
 public class UserMapper {
     public UserResponse mapToUserResponse(User user) {
         UserResponse response = new UserResponse();

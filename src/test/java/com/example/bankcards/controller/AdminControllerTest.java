@@ -1,6 +1,6 @@
 package com.example.bankcards.controller;
+
 import com.example.bankcards.dto.user.UserRequest;
-import com.example.bankcards.dto.user.UserResponse;
 import com.example.bankcards.entity.Role;
 import com.example.bankcards.entity.User;
 import com.example.bankcards.repository.CardRepository;
@@ -17,13 +17,14 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
-import java.util.Arrays;
-import java.util.List;
+
 import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.junit.jupiter.api.Assertions.*;
+
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
@@ -40,6 +41,7 @@ class AdminControllerTest {
     private CardRepository cardRepository;
     @Autowired
     private ObjectMapper objectMapper;
+
     @Test
     @WithMockUser(username = "admin", roles = "ADMIN")
     void getAllUsers_ShouldReturnUsersList() throws Exception {
@@ -56,6 +58,7 @@ class AdminControllerTest {
                 .andExpect(jsonPath("$[1].id").value(2L))
                 .andExpect(jsonPath("$[1].username").value("admin"));
     }
+
     @Test
     @WithMockUser(username = "admin", roles = "ADMIN")
     void getUserById_ShouldReturnUser() throws Exception {
@@ -71,8 +74,9 @@ class AdminControllerTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.id").value(1L))
                 .andExpect(jsonPath("$.username").value("user"))
-                .andExpect(jsonPath("$.roles[0]").value("USER")); 
+                .andExpect(jsonPath("$.roles[0]").value("USER"));
     }
+
     @Test
     @WithMockUser(username = "admin", roles = "ADMIN")
     void createUser_ShouldCreateUser() throws Exception {
@@ -90,10 +94,11 @@ class AdminControllerTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.id").exists())
                 .andExpect(jsonPath("$.username").value("newuser"))
-                .andExpect(jsonPath("$.roles[0]").value("USER")); 
+                .andExpect(jsonPath("$.roles[0]").value("USER"));
         assertEquals(initialUserCount + 1, userRepository.count(), "Количество пользователей должно увеличиться на 1");
         assertTrue(userRepository.findByUsername("newuser").isPresent(), "Новый пользователь должен существовать в БД");
     }
+
     @Test
     @WithMockUser(username = "admin", roles = "ADMIN")
     void updateUser_ShouldUpdateUser() throws Exception {
@@ -110,11 +115,12 @@ class AdminControllerTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.id").value(1L))
                 .andExpect(jsonPath("$.username").value("updateduser"))
-                .andExpect(jsonPath("$.roles[0]").value("USER")); 
+                .andExpect(jsonPath("$.roles[0]").value("USER"));
         var updatedUser = userRepository.findById(1L);
         assertTrue(updatedUser.isPresent(), "Обновленный пользователь должен существовать");
         assertEquals("updateduser", updatedUser.get().getUsername(), "Имя пользователя должно быть обновлено");
     }
+
     @Test
     @WithMockUser(username = "admin", roles = "ADMIN")
     @Transactional
@@ -134,6 +140,7 @@ class AdminControllerTest {
         assertFalse(userRepository.existsById(1L), "Пользователь должен быть удален из БД");
         assertEquals(initialUserCount - 1, userRepository.count(), "Количество пользователей должно уменьшиться на 1");
     }
+
     @Test
     @WithMockUser(username = "user1", roles = "USER")
     void getAllUsers_WithUserRole_ShouldReturnForbidden() throws Exception {

@@ -1,5 +1,5 @@
 REST API для управления банковскими картами, транзакциями и пользователями. Приложение реализовано с использованием
-Java 17, Spring Boot, Spring Security, PostgreSQL, Liquibase и Docker. Поддерживает роли `ADMIN` и `USER`,
+Java 17, Spring Boot+Security, PostgreSQL, Liquibase и Docker. Поддерживает роли `ADMIN` и `USER`,
 JWT-аутентификацию, маскирование номеров карт и документирование API через Swagger UI.
 
 Для удобства проверки:
