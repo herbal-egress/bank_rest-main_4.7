@@ -1,27 +1,27 @@
-# добавленный код: Определяет сервисы для Docker Compose
+
 services:
-  # добавленный код: Сервис для PostgreSQL, сохранён без изменений
+  
   postgres:
     image: postgres:15-alpine
     container_name: bank_postgres
     environment:
-      # добавленный код: Переменные окружения для базы данных, согласованы с application.yml
+      
       POSTGRES_DB: bankdb
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123
     ports:
-      # добавленный код: Порт 5433:5432 для соответствия application.yml; может быть изменён при локальных конфликтах
+      
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - bank_network
 
-  # изменил ИИ: Заменён образ maven на актуальный maven:3.8.6-eclipse-temurin-17 для исправления ошибки "image not found"
+  
   maven:
     image: maven:3.8.6-eclipse-temurin-17
     volumes:
-      # добавленный код: Изоляция от локального Maven через том maven-repo
+      
       - ./:/usr/src/app
       - maven-repo:/root/.m2
     working_dir: /usr/src/app
@@ -31,11 +31,11 @@ services:
     networks:
       - bank_network
 
-  # добавленный код: Сервис tomcat, сохранён без изменений
+  
   tomcat:
     image: tomcat:10.0-jdk17
     ports:
-      # добавленный код: Порт 8080:8080; может быть изменён при локальных конфликтах
+      
       - "8090:8080"
     volumes:
       - ./target/bank-rest.war:/usr/local/tomcat/webapps/bank-rest.war
@@ -43,19 +43,19 @@ services:
       - postgres
       - maven
     environment:
-      # добавленный код: Переменные для подключения к БД, согласованы с postgres
+      
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/bankdb
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=123
     networks:
       - bank_network
 
-# добавленный код: Тома для изоляции данных
+
 volumes:
   postgres_data:
   maven-repo:
 
-# добавленный код: Сеть для взаимодействия сервисов
+
 networks:
   bank_network:
     driver: bridge

@@ -1,8 +1,8 @@
 spring:
   main:
-    banner-mode: off # добавленный код: Отключает баннер Spring Boot при запуске
+    banner-mode: off 
   logging:
-    charset: UTF-8 # добавленный код: Устанавливает кодировку логов в UTF-8
+    charset: UTF-8 
   application:
     name: bank-rest
   profiles:
