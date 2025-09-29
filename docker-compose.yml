@@ -36,7 +36,7 @@ services:
     image: tomcat:10.0-jdk17
     ports:
       # добавленный код: Порт 8080:8080; может быть изменён при локальных конфликтах
-      - "8089:8080"
+      - "8090:8080"
     volumes:
       - ./target/bank-rest.war:/usr/local/tomcat/webapps/bank-rest.war
     depends_on:
