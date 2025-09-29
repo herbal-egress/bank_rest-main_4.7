@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. доработан Readme">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_Bank_rest.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_Bank_rest.md" afterDir="false" />
-    </list>
+    <list default="true" id="fda80acd-cc8f-4db9-bf7b-739ed4d8a60a" name="Changes" comment="Этап 7 документация. доработан Readme" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,11 +152,9 @@
       </method>
     </configuration>
     <configuration name="BankRestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="ACTIVE_PROFILES" value="dev" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bank-rest" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.bankcards.BankRestApplication" />
-      <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -261,15 +256,7 @@
       <workItem from="1759085016074" duration="97000" />
       <workItem from="1759087526521" duration="13000" />
       <workItem from="1759124754234" duration="5642000" />
-      <workItem from="1759130753078" duration="784000" />
-    </task>
-    <task id="LOCAL-00040" summary="Этап 5 тесты">
-      <option name="closed" value="true" />
-      <created>1758794723099</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1758794723099</updated>
+      <workItem from="1759130753078" duration="863000" />
     </task>
     <task id="LOCAL-00041" summary="Этап 5 тесты">
       <option name="closed" value="true" />
@@ -655,7 +642,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759131014414</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Этап 7 документация. доработан Readme">
+      <option name="closed" value="true" />
+      <created>1759131562230</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1759131562230</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
