@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>bank-rest</name>
     <description>REST API for bank card management system</description>
+    <packaging>war</packaging>
     <properties>
 
         <java.version>17</java.version>
@@ -30,9 +31,9 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <version>10.1.25</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -49,12 +49,12 @@ jwt:
   expiration: 86400000
 logging:
   level:
-    com.example.bank_rest: DEBUG
+    com.example.bankcards: DEBUG
     org.springframework.security: DEBUG
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 server:
-  port: 8080
+  port: 8089
   servlet:
     session:
       cookie:
