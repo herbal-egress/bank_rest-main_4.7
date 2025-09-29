@@ -1,8 +1,9 @@
+# добавленный код: Конфигурация Spring Boot
 spring:
   main:
-    banner-mode: off 
+    banner-mode: off
   logging:
-    charset: UTF-8 
+    charset: UTF-8
   application:
     name: bank-rest
   profiles:
@@ -54,6 +55,7 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 server:
+  # изменил ИИ: Порт изменён на 8091 для соответствия docker-compose.yml и избежания конфликта с локальным Tomcat на 8080
   port: 8080
   servlet:
     session:
