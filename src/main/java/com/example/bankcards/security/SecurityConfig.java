@@ -42,18 +42,18 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        log.info("=== КРИТИЧЕСКАЯ НАСТРОЙКА БЕЗОПАСНОСТИ ===");
+        log.info("=== НАСТРОЙКА БЕЗОПАСНОСТИ ===");
         http
                 .csrf(csrf -> {
-                    log.info("CSRF защита ОТКЛЮЧЕНА");
+                    log.info("CSRF защита ❌ ОТКЛЮЧЕНА");
                     csrf.disable();
                 })
                 .cors(cors -> {
-                    log.info("CORS настроен");
+                    log.info("CORS механизм ✅ настроен");
                     cors.configurationSource(corsConfigurationSource());
                 })
                 .sessionManagement(session -> {
-                    log.info("Сессии отключены (STATELESS)");
+                    log.info("Сессии отключены ❌ STATELESS");
                     session.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
                 })
                 .authorizeHttpRequests(authz -> authz
@@ -75,10 +75,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
-        log.info("=== КОНФИГУРАЦИЯ БЕЗОПАСНОСТИ ПРИМЕНЕНА ===");
-        log.info("permitAll для /auth/login: ✅ ВКЛЮЧЕНО");
-        log.info("CSRF: ❌ ОТКЛЮЧЕНО");
-        log.info("Sessions: ❌ STATELESS");
+        log.info("=== НАСТРОЙКА БЕЗОПАСНОСТИ ПРИМЕНЕНА ===");
         return http.build();
     }
 
@@ -115,25 +112,5 @@ public class SecurityConfig {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
         log.info("BCryptPasswordEncoder ✅ ИНИЦИАЛИЗИРОВАН (strength=12)");
         return encoder;
-    }
-
-    @Bean
-    public FilterRegistrationBean<Filter> invalidRequestFilter() {
-        FilterRegistrationBean<Filter> registration = new FilterRegistrationBean<>();
-        registration.setFilter(new Filter() {
-            @Override
-            public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-                    throws IOException, ServletException {
-                if (!(request instanceof HttpServletRequest)) {
-                    ((HttpServletResponse) response).sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid request");
-                    return;
-                }
-                chain.doFilter(request, response);
-            }
-        });
-        registration.addUrlPatterns("/*");
-        registration.setOrder(Ordered.HIGHEST_PRECEDENCE);
-        log.info("Фильтр для проверки валидности HTTP-запросов ✅ ВКЛЮЧЕН.");
-        return registration;
     }
 }

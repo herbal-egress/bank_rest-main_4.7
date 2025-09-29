@@ -36,7 +36,6 @@ spring:
   springdoc:
     swagger-ui:
       enabled: false
-# Конфигурация безопасности для тестового окружения
 security:
   csrf:
     enabled: false
