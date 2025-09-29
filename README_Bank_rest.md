@@ -7,7 +7,7 @@ JWT-аутентификацию, маскирование номеров кар
 - переменные среды НЕ использованы.
 
 ## Требования
-- Java 17
+- Java SE 17
 - Maven 3.8+
 - Docker и Docker Compose
 - IntelliJ IDEA (для запуска через IDE)
@@ -22,7 +22,7 @@ JWT-аутентификацию, маскирование номеров кар
       ```
 
 1. **Подготовка окружения**
-   - Убедитесь, что Java 17+ и Maven 3.8+ установлены:
+   - Убедитесь, что Java SE 17+ (https://www.oracle.com/java/technologies/downloads/archive/) и Maven 3.8+ (https://maven.apache.org/download.cgi) установлены:
    ```bash
    java -version
    ```
