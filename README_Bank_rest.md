@@ -4,7 +4,8 @@ JWT-аутентификацию, маскирование номеров кар
 
 Для удобства проверки:
 - логи в консоли реализованы на русском языке;
-- переменные среды НЕ использованы.
+- переменные среды НЕ использованы;
+- URL БД: jdbc:postgresql://localhost:5433/bankdb. Пользователь: postgres, пароль: 123.
 
 ## Требования
 - Java SE 17
@@ -12,16 +13,9 @@ JWT-аутентификацию, маскирование номеров кар
 - Docker и Docker Compose
 - IntelliJ IDEA (для запуска через IDE)
 
-## Запуск через Maven после скачивания из репозитория
+## Запуск через Maven (архив из репозитория)
 
-**Копирование репозитория**
-   - Скачайте архив проекта https://github.com/herbal-egress/bank_rest-main_4.7/archive/refs/heads/master.zip и распакуйте в папку c:\bank_rest-main_4.7-master
-   - Перейдите в папку проекта:
-      ```bash
-      cd c:\bank_rest-main_4.7-master
-      ```
-
-1. **Подготовка окружения**
+**Подготовка окружения**
    - Убедитесь, что Java SE 17+ (https://www.oracle.com/java/technologies/downloads/archive/) и Maven 3.8+ (https://maven.apache.org/download.cgi) установлены:
    ```bash
    java -version
@@ -35,6 +29,14 @@ JWT-аутентификацию, маскирование номеров кар
    ```bash
    docker --version
    ```
+
+1. **Копирование репозитория**
+- Скачайте архив проекта https://github.com/herbal-egress/bank_rest-main_4.7/archive/refs/heads/master.zip и распакуйте вложенную папку на диск C:\
+- Перейдите в папку проекта:
+   ```bash
+   cd c:\bank_rest-main_4.7-master
+   ```
+
 
 2. **Настройка PostgreSQL через Docker**
    - Убедитесь, что файл `docker-compose.yml` находится в корне проекта c:\bank_rest-main_4.7-master.
