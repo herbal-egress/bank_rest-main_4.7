@@ -36,7 +36,7 @@ services:
     image: tomcat:10.0-jdk17
     ports:
       
-      - "8090:8091"
+      - "8091:8080"
     volumes:
       - ./target/bank-rest.war:/usr/local/tomcat/webapps/bank-rest.war
     depends_on:
